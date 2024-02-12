@@ -1,3 +1,36 @@
+.index-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+  
+.index-item {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    border: 1px solid red;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    float: left;
+    border: 1px solid green;
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
 .offpage{
     position: absolute;
     left: -1000px;
@@ -5,4 +38,59 @@
 
 .offpage:focus{
     left: 10px;
+    position: static!important;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: auto;
+}
+
+.pet-name{
+    grid-area: pet-name;
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.bio{
+    grid-area: bio;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.photo-gallery{
+    text-align: center;
+    grid-area: photo-gallery;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.interests{
+    grid-area: interests;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.pet-grid-container{
+    display: grid;
+    border: 1px solid black;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 20px;
+    grid-template-areas: 
+        'pet-name pet-name pet-name'
+        'main-pic bio interests'
+        'photo-gallery photo-gallery photo-gallery';
+}
+
+.main-pet-pic {
+    grid-area: main-pic;
+    display: block;
+    margin: 0 auto;
+}
+
+.margin{
+    margin: 100px;
 }
