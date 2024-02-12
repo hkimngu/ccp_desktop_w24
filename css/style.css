@@ -1,8 +1,8 @@
-#main{
+.offpage{
     position: absolute;
     left: -1000px;
 }
 
-#main:focus{
+.offpage:focus{
     left: 10px;
 }
