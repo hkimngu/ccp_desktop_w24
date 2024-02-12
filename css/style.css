@@ -49,8 +49,8 @@ nav ul li:hover{
     overflow: auto;
 }
 
-.pet-name{
-    grid-area: pet-name;
+.topic-name{
+    grid-area: topic-name;
     width: 50%;
     text-align: center;
     border: 1px solid black;
@@ -58,8 +58,8 @@ nav ul li:hover{
     padding: 10px;
 }
 
-.bio{
-    grid-area: bio;
+.description{
+    grid-area: description;
     padding: 10px;
     border: 1px solid black;
 }
@@ -71,10 +71,32 @@ nav ul li:hover{
     padding: 10px;
 }
 
-.interests{
-    grid-area: interests;
+.text1{
+    grid-area: text1;
     border: 1px solid black;
     padding: 10px;
+}
+
+.text2{
+    grid-area: text2;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.main-pic {
+    grid-area: main-pic;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+.main-pic2 {
+    grid-area: main-pic2;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
 }
 
 .pet-grid-container{
@@ -85,18 +107,38 @@ nav ul li:hover{
     margin: 20px;
     grid-template-columns: auto auto auto;
     grid-template-areas: 
-        'pet-name pet-name pet-name'
-        'main-pic main-pic interests'
-        'bio bio bio'
+        'topic-name topic-name topic-name'
+        'main-pic main-pic text1'
+        'description description description'
         'photo-gallery photo-gallery photo-gallery';
 }
 
-.main-pet-pic {
-    grid-area: main-pic;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
+.recipe-grid-container{
+    display: grid;
+    border: 1px solid black;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 20px;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        'topic-name topic-name'
+        'main-pic description'
+        'text1 text2'
+        'photo-gallery photo-gallery';
+}
+
+.travel-grid-container{
+    display: grid;
+    border: 1px solid black;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 20px;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        'topic-name topic-name'
+        'main-pic main-pic2'
+        'description description'
+        'photo-gallery photo-gallery';
 }
 
 .margin{
