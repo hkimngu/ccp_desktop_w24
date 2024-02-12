@@ -1,0 +1,8 @@
+#main{
+    position: absolute;
+    left: -1000px;
+}
+
+#main:focus{
+    left: 10px;
+}
