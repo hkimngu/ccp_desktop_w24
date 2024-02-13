@@ -30,7 +30,7 @@ nav ul li{
     width: 25%;
     padding: 10px;
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
     font-family: Helvetica, sans-serif;
 }
 nav ul li:hover{
@@ -56,13 +56,13 @@ nav ul li:hover{
     width: 50%;
     text-align: center;
     background: white;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 10px;
 }
 
 .description{
     grid-area: description;
-    padding: 30px;
+    padding: 10px;
     background: white;
 }
 
@@ -94,13 +94,13 @@ nav ul li:hover{
 
 .text1{
     grid-area: text1;
-    padding: 30px;
+    padding: 10px;
     background: white;
 }
 
 .text2{
     grid-area: text2;
-    padding: 30px;
+    padding: 10px;
     background: white;
 }
 
@@ -125,8 +125,8 @@ nav ul li:hover{
     display: grid;
     border: 10px ridge white;
     grid-gap: 10px;
-    padding: 30px;
-    margin: 20px;
+    padding: 15px;
+    margin: 15px;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: 
         'topic-name topic-name'
@@ -140,9 +140,9 @@ nav ul li:hover{
     display: grid;
     border: 10px ridge white;
     grid-gap: 10px;
-    padding: 30px;
-    margin: 20px;
-    grid-template-columns: auto auto;
+    padding: 15px;
+    margin: 15px;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas: 
         'topic-name topic-name'
         'main-pic description'
@@ -155,8 +155,8 @@ nav ul li:hover{
     background: rgb(238, 211, 148);
     border: 10px ridge white;
     grid-gap: 10px;
-    padding: 30px;
-    margin: 20px;
+    padding: 15px;
+    margin: 15px;
     grid-template-columns: auto auto;
     grid-template-areas: 
         'topic-name topic-name'
@@ -185,7 +185,7 @@ body{
     background: linear-gradient(0deg, rgba(224,110,174,1) 0%, rgba(255,211,115,1) 100%);
     padding-bottom: 50px;
     font-family: helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 a{
