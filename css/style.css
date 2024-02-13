@@ -71,6 +71,26 @@ nav ul li:hover{
     padding: 10px;
 }
 
+.photo-gallery img{
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+}
+
+.photo-gallery figure{
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+}
+
+.photo-gallery figure img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
 .text1{
     grid-area: text1;
     border: 1px solid black;
