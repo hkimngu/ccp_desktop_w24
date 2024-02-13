@@ -1,6 +1,6 @@
 .index-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 10px;
 }
   
@@ -11,12 +11,13 @@
 
 h1{
     text-align: center;
+    color: #7A306C;
 }
 
 nav ul{
     list-style-type: none;
     display: flex;
-    border: 1px solid black;
+    background: white;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -24,12 +25,13 @@ nav ul{
 
 nav ul li{
     float: left;
-    border: 1px solid black;
+    border: 10px ridge #ffffff;
+    color: #7A306C;
     width: 25%;
     padding: 10px;
-    margin: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: Helvetica, sans-serif;
 }
 nav ul li:hover{
     background: rgb(230, 230, 230); 
@@ -53,21 +55,20 @@ nav ul li:hover{
     grid-area: topic-name;
     width: 50%;
     text-align: center;
-    border: 1px solid black;
+    background: white;
     margin: 30px auto;
     padding: 10px;
 }
 
 .description{
     grid-area: description;
-    padding: 10px;
-    border: 1px solid black;
+    padding: 30px;
+    background: white;
 }
 
 .photo-gallery{
     text-align: center;
     grid-area: photo-gallery;
-    border: 1px solid black;
     padding: 10px;
 }
 
@@ -93,17 +94,17 @@ nav ul li:hover{
 
 .text1{
     grid-area: text1;
-    border: 1px solid black;
-    padding: 10px;
+    padding: 30px;
+    background: white;
 }
 
 .text2{
     grid-area: text2;
-    border: 1px solid black;
-    padding: 10px;
+    padding: 30px;
+    background: white;
 }
 
-.main-pic {
+.main-pic{
     grid-area: main-pic;
     display: inline-block;
     margin: 0 auto;
@@ -111,8 +112,8 @@ nav ul li:hover{
     height: auto;
 }
 
-.main-pic2 {
-    grid-area: main-pic2;
+.gif{
+    grid-area: gif;
     display: inline-block;
     margin: 0 auto;
     width: 100%;
@@ -120,24 +121,26 @@ nav ul li:hover{
 }
 
 .pet-grid-container{
+    background: rgb(238, 211, 148);
     display: grid;
-    border: 1px solid black;
+    border: 10px ridge white;
     grid-gap: 10px;
-    padding: 10px;
+    padding: 30px;
     margin: 20px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas: 
-        'topic-name topic-name topic-name'
-        'main-pic main-pic text1'
-        'description description description'
-        'photo-gallery photo-gallery photo-gallery';
+        'topic-name topic-name'
+        'main-pic text1'
+        'description description'
+        'photo-gallery photo-gallery';
 }
 
 .recipe-grid-container{
+    background: rgb(238, 211, 148);
     display: grid;
-    border: 1px solid black;
+    border: 10px ridge white;
     grid-gap: 10px;
-    padding: 10px;
+    padding: 30px;
     margin: 20px;
     grid-template-columns: auto auto;
     grid-template-areas: 
@@ -149,14 +152,15 @@ nav ul li:hover{
 
 .travel-grid-container{
     display: grid;
-    border: 1px solid black;
+    background: rgb(238, 211, 148);
+    border: 10px ridge white;
     grid-gap: 10px;
-    padding: 10px;
+    padding: 30px;
     margin: 20px;
     grid-template-columns: auto auto;
     grid-template-areas: 
         'topic-name topic-name'
-        'main-pic main-pic2'
+        'gif main-pic'
         'description description'
         'photo-gallery photo-gallery';
 }
@@ -168,4 +172,28 @@ nav ul li:hover{
 .active{
 	background: rgb(238, 211, 148);
     font-weight: bold;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .gif{
+        display: none;
+    }
+}
+
+body{
+    background: rgb(224,110,174);
+    background: linear-gradient(0deg, rgba(224,110,174,1) 0%, rgba(255,211,115,1) 100%);
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #7A306C;
 }
