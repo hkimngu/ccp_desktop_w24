@@ -183,9 +183,7 @@ nav ul li:hover{
 body{
     background: rgb(224,110,174);
     background: linear-gradient(0deg, rgba(224,110,174,1) 0%, rgba(255,211,115,1) 100%);
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     font-family: helvetica, sans-serif;
     font-size: 18px;
 }
