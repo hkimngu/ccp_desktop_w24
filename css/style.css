@@ -1,17 +1,55 @@
-.index-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
+/*All pages*/
+a{
+    text-decoration: none;
 }
-  
-.index-item {
-    border: 1px solid black;
-    padding: 10px;
+
+a:link, a:visited {
+    color: #7A306C;
+}
+
+.active{
+	background-color: rgb(238, 211, 148);
+    font-weight: bold;
+}
+
+body{
+    background: linear-gradient(0deg, rgba(224,110,174,1) 0%, rgba(255,211,115,1) 100%);
+    padding-bottom: 50px;
+    font-family: helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.description{
+    grid-area: description;
+    padding: 20px;
+    background: white;
+}
+
+.gif{
+    grid-area: gif;
+    display: inline-block;
+    width: 100%;
+    height: auto;
 }
 
 h1{
     text-align: center;
     color: #7A306C;
+}
+
+main{
+    margin: 5px;
+}
+
+.main-pic{
+    grid-area: main-pic;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.margin{
+    margin: 100px;
 }
 
 nav ul{
@@ -51,6 +89,20 @@ nav ul li:hover{
     overflow: auto;
 }
 
+.photo-gallery{
+    text-align: center;
+    grid-area: photo-gallery;
+    padding: 10px;
+    align-self: center;
+}
+
+.photo-gallery img{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+}
+
 .topic-name{
     grid-area: topic-name;
     width: 50%;
@@ -60,41 +112,9 @@ nav ul li:hover{
     padding: 10px;
 }
 
-.description{
-    grid-area: description;
-    padding: 10px;
-    background: white;
-}
-
-.photo-gallery{
-    text-align: center;
-    grid-area: photo-gallery;
-    padding: 10px;
-}
-
-.photo-gallery img{
-    width: 30%;
-    height: auto;
-    display: inline-block;
-    margin: 10px;
-}
-
-.photo-gallery figure{
-    width: 30%;
-    height: auto;
-    display: inline-block;
-    margin: 10px;
-}
-
-.photo-gallery figure img{
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
 .text1{
     grid-area: text1;
-    padding: 10px;
+    padding: 20px;
     background: white;
 }
 
@@ -104,22 +124,77 @@ nav ul li:hover{
     background: white;
 }
 
-.main-pic{
-    grid-area: main-pic;
-    display: inline-block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
+/*Index page*/
+.index-container {
+    display: grid;
+    padding: 10px;
+}
+  
+.index-item {
+    border: 1px solid black;
+    padding: 10px;
 }
 
-.gif{
-    grid-area: gif;
-    display: inline-block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
+.index-main{
+    margin: 20px;
 }
 
+#sunset {
+    border: 10px ridge #ffffff;
+    background-color: white;
+    color: #7A306C;
+    width: 50%;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+    display: flex;
+}
+
+#sunset:hover{
+    background: rgb(230, 230, 230); 
+}
+
+#sunset:active{
+    transform: scale(0.90);
+}
+
+/*Sunset*/
+#active_sunset{
+    border: 10px ridge #ffffff;
+    color: #7A306C;
+    width: 50%;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+    display: flex;
+    background-color: rgb(238, 211, 148);
+    font-weight: bold;
+}
+
+#sunset_body{
+    background: rgba(224,110,174,1);
+    padding-bottom: 50px;
+    font-family: helvetica, sans-serif;
+    font-size: 14px;
+    animation: sunset_bkg 10s infinite;
+}
+
+@keyframes sunset_bkg{
+    0% {background: rgba(255,211,115,1)}
+    20% {background: rgb(232, 148, 80)}
+    45% {background: orange(255,211,115,1)}
+    65% {background: rgba(224,110,174,1)}
+    80% {background: pink(255,211,115,1)}
+    100% {background: rgba(255,211,115,1)}
+}
+
+/*Pet page*/
 .pet-grid-container{
     background: rgb(238, 211, 148);
     display: grid;
@@ -127,14 +202,16 @@ nav ul li:hover{
     grid-gap: 10px;
     padding: 15px;
     margin: 15px;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-        'topic-name topic-name'
-        'main-pic text1'
-        'description description'
-        'photo-gallery photo-gallery';
+        'topic-name'
+        'main-pic'
+        'text1'
+        'description'
+        'photo-gallery';
 }
 
+/*Recipe page*/
 .recipe-grid-container{
     background: rgb(238, 211, 148);
     display: grid;
@@ -142,14 +219,17 @@ nav ul li:hover{
     grid-gap: 10px;
     padding: 15px;
     margin: 15px;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-        'topic-name topic-name'
-        'main-pic description'
-        'text1 text2'
-        'photo-gallery photo-gallery';
+        'topic-name'
+        'main-pic'
+        'description'
+        'text1'
+        'text2'
+        'photo-gallery';
 }
 
+/*Travel page*/
 .travel-grid-container{
     display: grid;
     background: rgb(238, 211, 148);
@@ -157,41 +237,125 @@ nav ul li:hover{
     grid-gap: 10px;
     padding: 15px;
     margin: 15px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-        'topic-name topic-name'
-        'gif main-pic'
-        'description description'
-        'photo-gallery photo-gallery';
+        'topic-name'
+        'gif'
+        'main-pic'
+        'description'
+        'photo-gallery';
 }
 
-.margin{
-    margin: 100px;
+.photo-gallery figure{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+    
 }
 
-.active{
-	background: rgb(238, 211, 148);
-    font-weight: bold;
+.photo-gallery figure img{
+    width: 85%;
+    height: auto;
+    margin: 0;
 }
 
+/*Reduce Motion*/
 @media (prefers-reduced-motion: reduce){
     .gif{
         display: none;
     }
 }
 
-body{
-    background: rgb(224,110,174);
-    background: linear-gradient(0deg, rgba(224,110,174,1) 0%, rgba(255,211,115,1) 100%);
-    padding-bottom: 50px;
-    font-family: helvetica, sans-serif;
-    font-size: 14px;
+/*Tablet View*/
+@media only screen and (min-width: 600px){
+    .photo-gallery img{
+        width: 40%;
+        height: auto;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    /*Index page*/
+    .index-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+    }
+    
+    .index-item {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .index-main{
+        margin: 50px;
+    }
+
+    /*Pet page*/
+    .pet-grid-container{
+        background: rgb(238, 211, 148);
+        display: grid;
+        border: 10px ridge white;
+        grid-gap: 10px;
+        padding: 15px;
+        margin: 15px;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            'topic-name topic-name'
+            'main-pic text1'
+            'description description'
+            'photo-gallery photo-gallery';
+    }
+
+    /*Recipe page*/
+    .recipe-grid-container{
+        background: rgb(238, 211, 148);
+        display: grid;
+        border: 10px ridge white;
+        grid-gap: 10px;
+        padding: 15px;
+        margin: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'topic-name topic-name'
+            'main-pic description'
+            'text1 text2'
+            'photo-gallery photo-gallery';
+    }
+
+    /*Travel page*/
+    .travel-grid-container{
+        display: grid;
+        background: rgb(238, 211, 148);
+        border: 10px ridge white;
+        grid-gap: 10px;
+        padding: 15px;
+        margin: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'topic-name topic-name'
+            'gif main-pic'
+            'description description'
+            'photo-gallery photo-gallery';
+    }
+
+    .photo-gallery figure{
+        width: 45%;
+        height: auto;
+        display: inline-block;
+        margin: 10px;
+        
+    }
+    
+    .photo-gallery figure img{
+        width: 85%;
+        height: auto;
+        margin: 0;
+    }
 }
 
-a{
-    text-decoration: none;
-}
+/*Desktop View*/
+@media only screen and (min-width: 800px){
 
-a:link, a:visited {
-    color: #7A306C;
 }
