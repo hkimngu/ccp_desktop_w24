@@ -139,6 +139,11 @@ nav ul li:hover{
     margin: 20px;
 }
 
+.music {
+    text-align: center;
+    margin: 20px;
+}
+
 #sunset {
     border: 10px ridge #ffffff;
     background-color: white;
@@ -341,5 +346,51 @@ nav ul li:hover{
 
 /*Desktop View*/
 @media only screen and (min-width: 800px){
+    /*Pet page*/
+    .pet-grid-container{
+        background: rgb(238, 211, 148);
+        display: grid;
+        border: 10px ridge white;
+        grid-gap: 10px;
+        padding: 15px;
+        margin: 15px;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            'topic-name topic-name'
+            'main-pic text1'
+            'main-pic description'
+            'photo-gallery photo-gallery';
+    }
 
+    /*Recipe page*/
+    .recipe-grid-container{
+        background: rgb(238, 211, 148);
+        display: grid;
+        border: 10px ridge white;
+        grid-gap: 10px;
+        padding: 15px;
+        margin: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'topic-name topic-name'
+            'main-pic description'
+            'main-pic text1'
+            'main-pic text2'
+            'photo-gallery photo-gallery';
+    }
+
+    /*Travel page*/
+    .travel-grid-container{
+        display: grid;
+        background: rgb(238, 211, 148);
+        border: 10px ridge white;
+        grid-gap: 10px;
+        padding: 15px;
+        margin: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            'topic-name topic-name topic-name'
+            'gif main-pic description'
+            'photo-gallery photo-gallery photo-gallery';
+    }
 }
