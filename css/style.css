@@ -161,23 +161,7 @@ nav ul li:hover{
     transform: scale(0.90);
 }
 
-/*Sunset*/
-#active_sunset{
-    border: 10px ridge #ffffff;
-    color: #7A306C;
-    width: 50%;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-family: Helvetica, sans-serif;
-    margin: auto;
-    display: flex;
-    background-color: rgb(238, 211, 148);
-    font-weight: bold;
-}
-
-#sunset_body{
+.sunset_body{
     background: rgba(224,110,174,1);
     padding-bottom: 50px;
     font-family: helvetica, sans-serif;
